@@ -1,0 +1,27 @@
+# Плейбук установки всех необходимых мне для работы приложений
+---
+# Плей скачивания и установки необходимых пакетов
+- name: install all required packages
+  hosts: local
+  gather_facts: no
+  tasks:
+  # Таск установки необходимых пакетов
+  - name: download and install all application stack
+    apt: name={{ item }} state=present
+    with_items:
+      - curl
+      - git
+      - lsyncd
+      - htop
+      - redis-tools
+      - docker-engine
+# TODO: phpstorm
+#       google chrome
+#       joxy
+#       jdk
+#       ssh config
+#       docker-compose
+#       skype
+#       php-unit
+#       composer
+#       nodejs
