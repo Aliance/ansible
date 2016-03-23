@@ -21,5 +21,7 @@
     apt: name=docker-engine state=present
   - name: start docker service
     service: name=docker state=started
-  - name: add my user to docker group
-    user: name=ilesnykh group=docker
+  - name: add user to docker group
+    user: name=aliance groups=docker append=yes
+  - name: new group
+    command: newgrp docker
