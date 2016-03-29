@@ -11,6 +11,8 @@
       - lsyncd
       - htop
       - redis-tools
+  - name: install docker-py
+    pip: name=docker-py version=1.2.3
   - name: add docker repository into apt sources list
     apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-wily main' state=present # filename='docker'
   - name: add docker apt-key
