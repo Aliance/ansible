@@ -8,7 +8,10 @@ For example, after the OS reinstall or buying a new PC.
 First of all, you need to install ansible itself:
 
 ```bash
-sudo apt-get install -y -q ansible
+sudo apt-get install -y -qq software-properties-common
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install -y -qq ansible
 ```
 
 After the ansible was installed, you can check it version (`ansible --version`) and execute the commands below into this repository directory:
